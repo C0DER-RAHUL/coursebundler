@@ -13,7 +13,7 @@ export const buySubscription = catchAsyncError(async (req, res, next) => {
 
   const plan_id = process.env.PLAN_ID || "plan_OiUch8vKx62sqJ";
 
-  const subscription = await instance.subscriptions.create({
+  const subscription = await instance.subscription.create({
     plan_id,
     customer_notify: 1,
     total_count: 12,
