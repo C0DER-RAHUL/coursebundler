@@ -8,8 +8,8 @@ import { Payment } from "../models/Payment.js";
 export const buySubscription = catchAsyncError(async (req, res, next) => {
   const user = await User.findById(req.user._id);
 
-  if (user.role === "admin")
-    return next(new ErrorHandler("Admin can't buy subscription", 400));
+  // if (user.role === "admin")
+  //   return next(new ErrorHandler("Admin can't buy subscription", 400));
 
   const plan_id = process.env.PLAN_ID || "plan_OiUch8vKx62sqJ";
 
