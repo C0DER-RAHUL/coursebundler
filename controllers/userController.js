@@ -33,7 +33,7 @@ export const register = catchAsyncError(async (req, res, next) => {
     },
   });
 
-  sendToken(res, user, "Registered Successfully", 200);
+  sendToken(res, user, "Registered Successfully", 201);
 });
 
 export const login = catchAsyncError(async (req, res, next) => {
